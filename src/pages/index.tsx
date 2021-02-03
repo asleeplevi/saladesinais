@@ -109,7 +109,7 @@ const Home: React.FC = () => {
               </div>
               <div className="block">
                 <h2>Dá pra começar com <span>pouco dinheiro?</span></h2>
-                <p>Sim, da pra começar com apenas R$ 60,00! Nosso objetivo é ajudar você a gerar uma renda extra, sem precisar de meses de estudo.</p>
+                <p>Sim, você pode começar com apenas R$ 60,00! Nosso objetivo é ajudar você a gerar uma renda extra, sem precisar de meses de estudo.</p>
               </div>
             </div>
           </div>
