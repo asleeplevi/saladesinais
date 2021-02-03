@@ -196,7 +196,11 @@ export const SectionFeedback = styled.section`
   position: relative;
 
   h2{
-    padding-left: 10vw;
+    padding: 0 10vw;
+
+    @media(max-width: 800px){
+      padding: 0 8vw;
+    }
   }
   .chart-bg{
     svg{

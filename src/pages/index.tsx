@@ -102,7 +102,7 @@ const Home: React.FC = () => {
             </div>
             <div className="text-wrapper">
               <div className="block">
-                <h2>A sala <span>standard</span></h2>
+                <h2>A sala <span>Standard</span></h2>
                 <p>Por meio da Sala Standard, nosso grupo privado no Telegram, você vai ter acesso diariamente a sinais de entrada que são fornecidos pelo trader profissional <span>Bretson Oliveira</span>, com mais de 3 anos de experiência com o mercado de Forex e Binário.</p>
               </div>
               <div className="block">
