@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import { Container, SectionCall, SectionAbout, SectionFeedback, SectionBuy, SectionFaq, Footer } from '../styles/pages/home'
 
-import Logo from '../assets/gms-logo.svg'
+import Logo from '../assets/grupo-logo-line.svg'
 import LogoBullBear from '../assets/bullbear-logo.svg'
 import ArrowDown from '../assets/arrow-down.svg'
 import CandlesBg from '../assets/candles-bg.svg'

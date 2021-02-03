@@ -20,7 +20,9 @@ export const SectionCall = styled.section`
       width: 50px;
       height: 50px;
       
-      
+      *{
+       fill: #fff; 
+      }
     }
   } 
 
@@ -448,6 +450,10 @@ export const Footer = styled.footer`
       svg{
         width: 30px;
         height: auto;
+
+        *{
+        fill: #fff; 
+        }
       }
 
 
