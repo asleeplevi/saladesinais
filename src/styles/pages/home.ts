@@ -185,7 +185,7 @@ export const SectionAbout = styled.section`
         margin: 0 auto;
        
         img{
-          width: 80%;
+          width: 100%;
         }
       }
     }

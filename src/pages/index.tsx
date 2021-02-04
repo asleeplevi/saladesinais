@@ -161,7 +161,7 @@ const Home: React.FC = () => {
               </li>
               <li>
                 <IconHit/>
-                <p><strong>90% de assertividade!</strong> Atualmente o nossos sinais possuem uma altissima taxa de acerto.</p>
+                <p><strong>90% de assertividade!</strong> Atualmente o nossos sinais possuem uma altíssima taxa de acerto.</p>
               </li>
               <li>
                 <IconCalendar/>
@@ -169,7 +169,7 @@ const Home: React.FC = () => {
               </li>
             </ul>
             <div className="card">
-              <p><span>Mini Curso introdutório</span> + Acesso a <span>Vitalício</span> a sala de sinais STANDARD</p>
+              <p><span>Mini Curso introdutório</span> + Acesso <span>Vitalício</span> a sala de sinais STANDARD</p>
               <h2>R$ 100,00</h2>
               <div className="btn">
                 <a >Comprar agora</a>
