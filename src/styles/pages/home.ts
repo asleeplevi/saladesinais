@@ -222,7 +222,7 @@ export const SectionFeedback = styled.section`
     }
   }
   .wrapper{
-    overflow-x: scroll;
+    overflow: hidden;
     cursor: grab;
 
     &.dragging{

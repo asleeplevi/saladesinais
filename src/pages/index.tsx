@@ -120,25 +120,25 @@ const Home: React.FC = () => {
           <div id="feedback" className="wrapper" onMouseDown={handleMouseDown} onMouseUp={handleMouseUp} onMouseMove={handleMouseMove}>
             <ul>
                 <li>
-                  <img src={Feedback1} alt="feedback"/>
+                  <img src={Feedback1} alt="feedback" draggable="false"/>
                 </li>
                 <li>
-                  <img src={Feedback2} alt="feedback"/>
+                  <img src={Feedback2} alt="feedback" draggable="false"/>
                 </li>
                 <li>
-                  <img src={Feedback3} alt="feedback"/>
+                  <img src={Feedback3} alt="feedback" draggable="false"/>
                 </li>
                 <li>
-                  <img src={Feedback4} alt="feedback"/>
+                  <img src={Feedback4} alt="feedback" draggable="false"/>
                 </li>
                 <li>
-                  <img src={Feedback5} alt="feedback"/>
+                  <img src={Feedback5} alt="feedback" draggable="false"/>
                 </li>
                 <li>
-                  <img src={Feedback6} alt="feedback"/>
+                  <img src={Feedback6} alt="feedback" draggable="false"/>
                 </li>
                 <li>
-                  <img src={Feedback7} alt="feedback"/>
+                  <img src={Feedback7} alt="feedback" draggable="false"/>
                 </li>
               </ul>
           </div>
