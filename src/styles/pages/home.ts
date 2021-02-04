@@ -178,7 +178,7 @@ export const SectionAbout = styled.section`
         width: 80%;
       }
    
-      @media(max-width: 800px){
+      @media(max-width: 1050px){
         display: flex;
         justify-content: center;
 
