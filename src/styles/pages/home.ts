@@ -3,8 +3,11 @@ import styled from 'styled-components'
 export const Container = styled.div`
   padding: 0 10vw;
 
-  @media(max-width: 800px){
+  @media(max-width: 1000px){
     padding: 0 8vw;
+  }
+  @media(max-width: 950px){
+    padding: 0 5vw;
   }
 `
 
@@ -172,10 +175,18 @@ export const SectionAbout = styled.section`
           width: 120%;
           left: -50%;
         }
+        @media(min-width: 700px) and (max-width: 1050px){
+          top: 27%;
+        }
       }
      
       img{
         width: 80%;
+
+        @media(max-width: 600px){
+          width:90%;
+        }
+
       }
    
       @media(max-width: 1050px){
@@ -222,7 +233,8 @@ export const SectionFeedback = styled.section`
     }
   }
   .wrapper{
-    overflow: hidden;
+    overflow: scroll;
+    scrollbar-width: none;
     cursor: grab;
 
     &.dragging{
@@ -241,6 +253,8 @@ export const SectionFeedback = styled.section`
       list-style: none;
       display: inline-flex;
       gap: 30px;
+      
+     
 
       li{
         position: relative;

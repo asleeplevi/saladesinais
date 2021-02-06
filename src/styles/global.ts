@@ -10,7 +10,7 @@ export default createGlobalStyle`
     background-color: #322E39;
     color: #DEDEDE;
     font-size: 100%;
-    font-family: Roboto;
+    font-family: Roboto, sans-serif;
   }
   h1{
     font-size: calc( 1.5rem + 1vw );

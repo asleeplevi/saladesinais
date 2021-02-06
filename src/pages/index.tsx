@@ -9,7 +9,7 @@ import ArrowDown from '../assets/arrow-down.svg'
 import CandlesBg from '../assets/candles-bg.svg'
 import ChartBg from '../assets/chart-bg.svg'
 import ChartOnlyBg from '../assets/chartonly-bg.svg'
-import PhoneMockup from '../assets/phone-mockup.png'
+import PhoneMockup from '../assets/phone-mockup.webp'
 import IconSupport from '../assets/support.svg'
 import IconOperations from '../assets/operations.svg'
 import IconHit from '../assets/hit.svg'
@@ -187,9 +187,36 @@ const Home: React.FC = () => {
                 <div className="arrow">
                   <ArrowDown/>
                 </div>
-                <h3>A sala de sinais é pra mim?</h3>
+                <h3>Quais médias você usa?</h3>
               </div>
-              <p className="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Magnis dis parturient montes nascetur ridiculus. Malesuada fames ac turpis egestas integer eget aliquet. Mi bibendum neque egestas congue quisque egestas.</p>
+              <p className="content">Uso 6 médias moveis, 200,100,65,50,35,20</p>
+            </li>
+            <li className={toggleFaq[1]} onClick={ () => toggleFaqItem(1)}>
+              <div className="title">
+                <div className="arrow">
+                  <ArrowDown/>
+                </div>
+                <h3>O que é esse tela branca com gráfico que sempre ta aberto na hora das operações na IQ?</h3>
+              </div>
+              <p className="content">Se chama metatrader 5, utilizo por conta da maior precisão das médias, visto que a IQ, tende a fazer mini manipulações que a longo prazo impacta drasticamente a posição real da Media.</p>
+            </li>
+            <li className={toggleFaq[2]} onClick={ () => toggleFaqItem(2)}>
+              <div className="title">
+                <div className="arrow">
+                  <ArrowDown/>
+                </div>
+                <h3>Quantos % ao dia você recomenda?</h3>
+              </div>
+              <p className="content">Recomendo 3 a 5%, pois é bem facil de alcançar essa meta, quanto maior a %, mais risco você coloca seu capital, e dias consecutivos de loss podem afetar sua moral, tornando seus dias de operações um tormento.</p>
+            </li>
+            <li className={toggleFaq[3]} onClick={ () => toggleFaqItem(3)}>
+              <div className="title">
+                <div className="arrow">
+                  <ArrowDown/>
+                </div>
+                <h3>Preciso de conhecimento para pegar sinais?</h3>
+              </div>
+              <p className="content">Não, basta seguir o tutorial que é passado no video que todos recebem assim que entram para a sala de sinal, mas, se você tem breve conhecimento de gráfico, seus ganhos podem ser impulsionados.</p>
             </li>
           </ul>
         </Container>
