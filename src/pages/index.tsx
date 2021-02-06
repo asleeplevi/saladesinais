@@ -23,7 +23,7 @@ import Feedback6 from '../assets/feedback/feedback-6.png'
 import Feedback7 from '../assets/feedback/feedback-7.png'
 
 const Home: React.FC = () => {
-  const [toggleFaq, setToggleFaq] = useState(['close', 'close', 'close'])
+  const [toggleFaq, setToggleFaq] = useState(['close', 'close', 'close', 'close'])
   const scroll = [0, 0, 0]
 
   function goToAbout() {
@@ -190,7 +190,7 @@ const Home: React.FC = () => {
               </div>
               <p className="content">Uso 6 médias moveis, 200,100,65,50,35,20</p>
             </li>
-            <li className={toggleFaq[0]} onClick={ () => toggleFaqItem(1)}>
+            <li className={toggleFaq[1]} onClick={ () => toggleFaqItem(1)}>
               <div className="title">
                 <div className="arrow">
                   <ArrowDown/>
@@ -199,7 +199,7 @@ const Home: React.FC = () => {
               </div>
               <p className="content">Se chama metatrader 5, utilizo por conta da maior precisão das médias, visto que a IQ, tende a fazer mini manipulações que a longo prazo impacta drasticamente a posição real da Media.</p>
             </li>
-            <li className={toggleFaq[0]} onClick={ () => toggleFaqItem(2)}>
+            <li className={toggleFaq[2]} onClick={ () => toggleFaqItem(2)}>
               <div className="title">
                 <div className="arrow">
                   <ArrowDown/>
@@ -208,7 +208,7 @@ const Home: React.FC = () => {
               </div>
               <p className="content">Recomendo 3 a 5%, pois é bem facil de alcançar essa meta, quanto maior a %, mais risco você coloca seu capital, e dias consecutivos de loss podem afetar sua moral, tornando seus dias de operações um tormento.</p>
             </li>
-            <li className={toggleFaq[0]} onClick={ () => toggleFaqItem(3)}>
+            <li className={toggleFaq[3]} onClick={ () => toggleFaqItem(3)}>
               <div className="title">
                 <div className="arrow">
                   <ArrowDown/>
