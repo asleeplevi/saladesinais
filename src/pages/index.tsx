@@ -168,11 +168,13 @@ const Home: React.FC = () => {
               </li>
             </ul>
             <div className="card">
-              <p><span>Mini Curso introdutório</span> + Acesso <span>Vitalício</span> a sala de sinais STANDARD</p>
-              <h2>R$ 100,00</h2>
-              <div className="btn">
-                <a >Comprar agora</a>
-              </div>
+              <form method="post"></form>
+                <h4>Quer ser o primeiro a saber quando a <span>Sala Standard</span> estiver aberta?</h4>
+                <p>Deixe o seu email e também receba acesso a nossa sala de sinais <b>gratuita</b></p>
+                <input placeholder="email@exemplo.com" type="text"/>
+                <button className="btn">
+                  <a>Quero ser avisado</a>
+                </button>
             </div>
           </div>
         </Container>

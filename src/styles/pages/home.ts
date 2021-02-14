@@ -322,23 +322,39 @@ export const SectionBuy = styled.section`
       background: ${props => props.theme.colors.grey};
       border-radius:5px;
 
-      text-align: center;
+      text-align: left;
       font-weight: bold;
 
       @media(max-width: 800px){
         padding: 50px 25px;
       }
 
-      h2{
-        font-size: 2.5rem;
+      h4{
+        font-size: 1.3rem;
       }
-      p span{
+
+      p{
+        font-weight: normal;
+      }
+
+      h4 span{
         color: ${props => props.theme.colors.primary};
+      }
+      
+      input{
+        height: 40px;
+        font-size: 1rem;
+        border: 0;
+        background-color: ${props => props.theme.colors.background};
+        border-radius: 5px;
+        padding-left: 15px;
+        color: ${props => props.theme.colors.grey};
       }
 
       .btn{
         width: 100%;
-        height: 70px;
+        height: 60px;
+        border: 0;
 
         cursor: pointer;
 
@@ -364,6 +380,8 @@ export const SectionBuy = styled.section`
         a{
           transition: all 100ms ease;
 
+          font-weight: bold;
+
           display: flex;
           justify-content: center;
           align-items: center;
@@ -372,7 +390,7 @@ export const SectionBuy = styled.section`
           color: ${props => props.theme.colors.grey};
           width: 100%;
           height: 100%;
-          font-size: 1.5rem;
+          font-size: 1.2rem;
         }
       }
     }
