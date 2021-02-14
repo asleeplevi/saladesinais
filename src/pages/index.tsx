@@ -1,6 +1,8 @@
-import { useState, MouseEvent } from 'react'
+import { useState, MouseEvent, FormEvent } from 'react'
 import Head from 'next/head'
 import { Container, SectionCall, SectionAbout, SectionFeedback, SectionBuy, SectionFaq, Footer } from '../styles/pages/home'
+
+import axios from 'axios'
 
 import Logo from '../assets/grupo-logo-line.svg'
 import LogoBullBear from '../assets/bullbear-logo.svg'
@@ -23,6 +25,10 @@ import Feedback6 from '../assets/feedback/feedback-6.png'
 import Feedback7 from '../assets/feedback/feedback-7.png'
 
 const Home: React.FC = () => {
+  const [linkRoom, setLinkRoom] = useState<string>()
+  const [email, setEmail] = useState('')
+  const [submitStatus, setSubmitStatus] = useState('')
+  const [submitText, setSubmitText] = useState('Quero ser avisado')
   const [toggleFaq, setToggleFaq] = useState(['close', 'close', 'close', 'close'])
   const scroll = [0, 0, 0]
 
@@ -66,6 +72,29 @@ const Home: React.FC = () => {
     const newState = (toggleFaq[position] === 'open') ? 'close' : 'open'
     toggleFaq[position] = newState
     setToggleFaq([...toggleFaq])
+  }
+
+  async function handleRegister(event: FormEvent) {
+    event.preventDefault()
+    setSubmitStatus('')
+
+    // if (email.length < 8) return
+
+    setSubmitText('Cadastrando')
+    const response = await axios.post('/api/subscribe', { email })
+
+    if (response.data.data === 'error') {
+      setSubmitText('Email inválido')
+      return setSubmitStatus('error')
+    }
+    setSubmitStatus('success')
+    setSubmitText('Sucesso!')
+
+    setTimeout(() => {
+      setSubmitStatus('link')
+      setLinkRoom('https://www.google.com')
+      return setSubmitText('Acessar Sala Gratuita')
+    }, 1000)
   }
 
   return (
@@ -168,13 +197,21 @@ const Home: React.FC = () => {
               </li>
             </ul>
             <div className="card">
-              <form method="post"></form>
+              <form method="post" onSubmit={handleRegister}>
                 <h4>Quer ser o primeiro a saber quando a <span>Sala Standard</span> estiver aberta?</h4>
                 <p>Deixe o seu email e também receba acesso a nossa sala de sinais <b>gratuita</b></p>
-                <input placeholder="email@exemplo.com" type="text"/>
-                <button className="btn">
-                  <a>Quero ser avisado</a>
+                <input
+                  type="email"
+                  required
+                  className={`${submitStatus}`}
+                  placeholder="email@exemplo.com"
+                  value={email}
+                  onChange={e => setEmail(e.target.value)}/>
+                <button className={`btn ${submitStatus}`} type="submit">
+                  <a target="_blank" rel="noreferrer" href={linkRoom}>{submitText}</a>
+                  <div className={`loading ${submitText}`}></div>
                 </button>
+              </form>
             </div>
           </div>
         </Container>

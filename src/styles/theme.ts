@@ -3,7 +3,9 @@ const theme = {
     background: '#322E39',
     font: '#DEDEDE',
     grey: '#5E576D',
-    primary: '#FFCC81'
+    primary: '#FFCC81',
+    error: '#FF8181',
+    success: '#A9FF81',
   }
 }
 

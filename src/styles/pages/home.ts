@@ -309,7 +309,6 @@ export const SectionBuy = styled.section`
 
       display: flex;
       flex-direction: column;
-      gap: 20px;
 
       justify-content: center;
       margin: 0 0 0 auto;
@@ -318,12 +317,17 @@ export const SectionBuy = styled.section`
       padding:50px;
       max-width: 450px;
       height: auto;
-
       background: ${props => props.theme.colors.grey};
       border-radius:5px;
 
       text-align: left;
       font-weight: bold;
+      
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
 
       @media(max-width: 800px){
         padding: 50px 25px;
@@ -348,13 +352,20 @@ export const SectionBuy = styled.section`
         background-color: ${props => props.theme.colors.background};
         border-radius: 5px;
         padding-left: 15px;
-        color: ${props => props.theme.colors.grey};
+        color: ${props => props.theme.colors.font};
+        overflow: hidden;
+        transition: all ease 200ms;
+
+        &.link{
+          height: 0;
+        }
       }
 
       .btn{
         width: 100%;
         height: 60px;
         border: 0;
+        position: relative;
 
         cursor: pointer;
 
@@ -367,6 +378,14 @@ export const SectionBuy = styled.section`
         background: ${props => props.theme.colors.primary};
         transition: all ease 200ms;
 
+        &.error{
+          background: ${props => props.theme.colors.error};
+        }
+
+        &.success{
+          background: ${props => props.theme.colors.success};
+        }
+
         &:hover{
           background: #FFE6B7;
         }
@@ -374,6 +393,29 @@ export const SectionBuy = styled.section`
         &:active{
           a{
             transform: scale(.98)
+          }
+        }
+        .loading{
+          position: absolute;
+          right: 1.5rem;
+          width: 30px;
+          height: 30px;
+          border: 4px solid ${props => props.theme.colors.grey};
+          border-radius: 50%;
+          animation: rotate linear 900ms infinite;
+          display: none;
+          &.Cadastrando{
+            display: initial;
+          }
+
+          &::after{
+            content: " ";
+            width: 15px;
+            height: 15px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: ${props => props.theme.colors.primary};
           }
         }
 
@@ -395,6 +437,11 @@ export const SectionBuy = styled.section`
       }
     }
 
+  }
+
+  @keyframes rotate{
+    from{transform: rotate(0deg)}
+    to{transform: rotate(360deg)}
   }
 `
 
