@@ -83,7 +83,7 @@ const Home: React.FC = () => {
               <p>Com a Sala de Sinais <strong>Standard</strong>, você pode conseguir lucro diário no mercado apenas seguindo sinais.</p>
             </div>
             <div className="video-frame">
-              <iframe src="https://fast.wistia.net/embed/iframe/rbvpub1kad?videoFoam=true" title=" [Example Video] Wistia Video Essentials" allow="autoplay; fullscreen" scrolling="no" name="wistia_embed" width="100%" height="100%"></iframe>
+              <iframe src="https://fast.wistia.net/embed/iframe/bzzdadowun?videoFoam=true" title=" [Example Video] Wistia Video Essentials" allow="autoplay; fullscreen" scrolling="no" name="wistia_embed" width="100%" height="100%"></iframe>
             </div>
           </div>
           <div className="arrow-down" onClick={goToAbout}><ArrowDown/></div>
