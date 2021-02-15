@@ -58,7 +58,7 @@ export const SectionCall = styled.section`
       position: relative;
       background-color: ${props => props.theme.colors.grey};
       border-radius: 5px;
-      
+
       @media(max-width: 1030px){
         height: calc( 7vh + 11vw );
       }
@@ -188,11 +188,12 @@ export const SectionAbout = styled.section`
 
         @media(max-width: 600px){
           width:90%;
+          max-height: 557px;
         }
 
       }
    
-      @media(max-width: 1050px){
+      @media (min-height: 600px) and (max-width: 1050px){
         display: flex;
         justify-content: center;
 
