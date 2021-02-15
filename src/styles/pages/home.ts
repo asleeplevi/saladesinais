@@ -57,7 +57,8 @@ export const SectionCall = styled.section`
       height: calc( 27vh + 11vw );
       position: relative;
       background-color: ${props => props.theme.colors.grey};
-
+      border-radius: 5px;
+      
       @media(max-width: 1030px){
         height: calc( 7vh + 11vw );
       }

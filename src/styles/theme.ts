@@ -5,7 +5,7 @@ const theme = {
     grey: '#5E576D',
     primary: '#FFCC81',
     error: '#FF8181',
-    success: '#A9FF81',
+    success: '#A9FF81'
   }
 }
 
