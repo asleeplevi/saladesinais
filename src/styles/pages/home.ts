@@ -56,6 +56,7 @@ export const SectionCall = styled.section`
       width: 100%;
       height: calc( 27vh + 11vw );
       position: relative;
+      background-color: ${props => props.theme.colors.grey};
 
       @media(max-width: 1030px){
         height: calc( 7vh + 11vw );
@@ -72,6 +73,7 @@ export const SectionCall = styled.section`
 
       &::before{
         content: "";
+        z-index: -1;
         width: 50%;
         height: 50%;
         
@@ -388,6 +390,11 @@ export const SectionBuy = styled.section`
 
         &:hover{
           background: #FFE6B7;
+          .loading{
+            &::after{
+              background: #FFE6B7;
+            }
+          }
         }
 
         &:active{

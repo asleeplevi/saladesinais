@@ -78,7 +78,7 @@ const Home: React.FC = () => {
     event.preventDefault()
     setSubmitStatus('')
 
-    // if (email.length < 8) return
+    if (email.length < 8) return
 
     setSubmitText('Cadastrando')
     const response = await axios.post('/api/subscribe', { email })
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
 
     setTimeout(() => {
       setSubmitStatus('link')
-      setLinkRoom('https://www.google.com')
+      setLinkRoom('https://t.me/joinchat/E978-d7ZWAgQX-CJ')
       return setSubmitText('Acessar Sala Gratuita')
     }, 1000)
   }
@@ -105,14 +105,14 @@ const Home: React.FC = () => {
     <main>
       <SectionCall>
         <Container>
-          <div className="logo-wrapper"><Logo/></div>
+          <header className="logo-wrapper"><Logo/></header>
           <div className="wrapper">
             <div className="text-content">
               <h1>Você não precisa ser um trader profissional para conseguir <span>lucrar!</span></h1>
               <p>Com a Sala de Sinais <strong>Standard</strong>, você pode conseguir lucro diário no mercado apenas seguindo sinais.</p>
             </div>
             <div className="video-frame">
-              <iframe src="https://fast.wistia.net/embed/iframe/bzzdadowun?videoFoam=true" title=" [Example Video] Wistia Video Essentials" allow="autoplay; fullscreen" scrolling="no" name="wistia_embed" width="100%" height="100%"></iframe>
+              <iframe src="https://fast.wistia.net/embed/iframe/x8psnhzekr?videoFoam=true" title=" [Example Video] Wistia Video Essentials" allow="autoplay; fullscreen" scrolling="no" name="wistia_embed" width="100%" height="100%"></iframe>
             </div>
           </div>
           <div className="arrow-down" onClick={goToAbout}><ArrowDown/></div>
