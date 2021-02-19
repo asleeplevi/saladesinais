@@ -16,13 +16,13 @@ import IconOperations from '../assets/operations.svg'
 import IconHit from '../assets/hit.svg'
 import IconCalendar from '../assets/calendar.svg'
 
-import Feedback1 from '../assets/feedback/feedback-1.png'
-import Feedback2 from '../assets/feedback/feedback-2.png'
-import Feedback3 from '../assets/feedback/feedback-3.png'
-import Feedback4 from '../assets/feedback/feedback-4.png'
-import Feedback5 from '../assets/feedback/feedback-5.png'
-import Feedback6 from '../assets/feedback/feedback-6.png'
-import Feedback7 from '../assets/feedback/feedback-7.png'
+import Feedback1 from '../assets/feedback/feedback-1.webp'
+import Feedback2 from '../assets/feedback/feedback-2.webp'
+import Feedback3 from '../assets/feedback/feedback-3.webp'
+import Feedback4 from '../assets/feedback/feedback-4.webp'
+import Feedback5 from '../assets/feedback/feedback-5.webp'
+import Feedback6 from '../assets/feedback/feedback-6.webp'
+import Feedback7 from '../assets/feedback/feedback-7.webp'
 
 const Home: React.FC = () => {
   const [linkRoom, setLinkRoom] = useState<string>()
@@ -72,29 +72,6 @@ const Home: React.FC = () => {
     const newState = (toggleFaq[position] === 'open') ? 'close' : 'open'
     toggleFaq[position] = newState
     setToggleFaq([...toggleFaq])
-  }
-
-  async function handleRegister(event: FormEvent) {
-    event.preventDefault()
-    setSubmitStatus('')
-
-    if (email.length < 8) return
-
-    setSubmitText('Cadastrando')
-    const response = await axios.post('/api/subscribe', { email })
-
-    if (response.data.data === 'error') {
-      setSubmitText('Email inválido')
-      return setSubmitStatus('error')
-    }
-    setSubmitStatus('success')
-    setSubmitText('Sucesso!')
-
-    setTimeout(() => {
-      setSubmitStatus('link')
-      setLinkRoom('https://t.me/joinchat/E978-d7ZWAgQX-CJ')
-      return setSubmitText('Acessar Sala Gratuita')
-    }, 1000)
   }
 
   return (
@@ -197,19 +174,11 @@ const Home: React.FC = () => {
               </li>
             </ul>
             <div className="card">
-              <form method="post" onSubmit={handleRegister}>
-                <h4>Quer ser o primeiro a saber quando a <span>Sala Standard</span> estiver aberta?</h4>
-                <p>Deixe o seu email e também receba acesso a nossa sala de sinais <b>gratuita</b></p>
-                <input
-                  type="email"
-                  required
-                  className={`${submitStatus}`}
-                  placeholder="email@exemplo.com"
-                  value={email}
-                  onChange={e => setEmail(e.target.value)}/>
-                <button className={`btn ${submitStatus}`} type="submit">
-                  <a target="_blank" rel="noreferrer" href={linkRoom}>{submitText}</a>
-                  <div className={`loading ${submitText}`}></div>
+              <form method="post" onClick={ e => e.preventDefault() }>
+                <p><span>Mini Curso introdutório</span> + Acesso <span>Vitalício</span> a sala de sinais STANDARD</p>
+                <h2>R$ 100,00</h2>
+                <button type="submit">
+                  <a>Comprar agora</a>
                 </button>
               </form>
             </div>

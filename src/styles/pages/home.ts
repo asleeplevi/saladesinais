@@ -71,8 +71,24 @@ export const SectionCall = styled.section`
         margin-top: 30px; 
         height: calc( 18vh + 11vw );
       }
-
       &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: 100%;
+        background-color: #79728950;
+        animation: loading 1000ms ease infinite;
+      }
+
+      @keyframes loading{
+        0%{ left:0; opacity: 1; width: 0%;}
+        20%{width: 50%;}
+        100%{left: 100%; opacity:0; width: 0%;}
+      }
+
+      &::after{
         content: "";
         z-index: -1;
         width: 50%;
@@ -80,7 +96,7 @@ export const SectionCall = styled.section`
         
         position: absolute;
         top: -6px;
-        right: -8px;
+        right: -6px;
         
         background: ${props => props.theme.colors.primary}; 
         border-radius: 0 5px 0 0;
@@ -184,10 +200,7 @@ export const SectionAbout = styled.section`
       }
      
       img{
-        width: 80%;
-
         @media(max-width: 600px){
-          width:90%;
           max-height: 557px;
         }
 
@@ -198,10 +211,6 @@ export const SectionAbout = styled.section`
         justify-content: center;
 
         margin: 0 auto;
-       
-        img{
-          width: 100%;
-        }
       }
     }
   }
@@ -330,42 +339,26 @@ export const SectionBuy = styled.section`
       form {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 25px;
+        text-align: center;
       }
 
       @media(max-width: 800px){
         padding: 50px 25px;
       }
 
-      h4{
-        font-size: 1.3rem;
+      h2{
+        font-size: 2rem;
       }
 
       p{
         font-weight: normal;
-      }
-
-      h4 span{
-        color: ${props => props.theme.colors.primary};
-      }
-      
-      input{
-        height: 40px;
-        font-size: 1rem;
-        border: 0;
-        background-color: ${props => props.theme.colors.background};
-        border-radius: 5px;
-        padding-left: 15px;
-        color: ${props => props.theme.colors.font};
-        overflow: hidden;
-        transition: all ease 200ms;
-
-        &.link{
-          height: 0;
+        span{
+          color: ${props => props.theme.colors.primary};
         }
       }
-
-      .btn{
+      
+      button{
         width: 100%;
         height: 60px;
         border: 0;
@@ -382,14 +375,6 @@ export const SectionBuy = styled.section`
         background: ${props => props.theme.colors.primary};
         transition: all ease 200ms;
 
-        &.error{
-          background: ${props => props.theme.colors.error};
-        }
-
-        &.success{
-          background: ${props => props.theme.colors.success};
-        }
-
         &:hover{
           background: #FFE6B7;
           .loading{
@@ -402,29 +387,6 @@ export const SectionBuy = styled.section`
         &:active{
           a{
             transform: scale(.98)
-          }
-        }
-        .loading{
-          position: absolute;
-          right: 1.5rem;
-          width: 30px;
-          height: 30px;
-          border: 4px solid ${props => props.theme.colors.grey};
-          border-radius: 50%;
-          animation: rotate linear 900ms infinite;
-          display: none;
-          &.Cadastrando{
-            display: initial;
-          }
-
-          &::after{
-            content: " ";
-            width: 15px;
-            height: 15px;
-            position: absolute;
-            top: -5px;
-            right: -5px;
-            background-color: ${props => props.theme.colors.primary};
           }
         }
 
