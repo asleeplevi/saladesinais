@@ -2,9 +2,7 @@ import { useState, MouseEvent, FormEvent } from 'react'
 import Head from 'next/head'
 import { Container, SectionCall, SectionAbout, SectionFeedback, SectionBuy, SectionFaq, Footer } from '../styles/pages/home'
 
-import axios from 'axios'
-
-import Logo from '../assets/grupo-logo-line.svg'
+import Logo from '../assets/bullbear-logo.svg'
 import LogoBullBear from '../assets/bullbear-logo.svg'
 import ArrowDown from '../assets/arrow-down.svg'
 import CandlesBg from '../assets/candles-bg.svg'
@@ -235,15 +233,12 @@ const Home: React.FC = () => {
                 <a href="https://www.instagram.com/bull.bear_/" rel="noreferrer" target="_blank">
                   <LogoBullBear/>
                 </a>
-                <a href="https://www.instagram.com/grupomindset_" rel="noreferrer" target="_blank">
-                  <Logo/>
-                </a>
             </div>
 
           </div>
           <div className="row-2">
             <div className="copyright">
-              <p>© 2021 Grupo Mindset </p>
+              <p>© 2021 Bullbear </p>
             </div>
             <div className="developed">
               <p>Desenvolvido por <a href="https://www.onthejourney.com.br" rel="noreferrer" target="_blank">journey</a></p>
